@@ -19,6 +19,7 @@ public class Shooting : MonoBehaviour
 
     void Shoot()
     {
+        AudioManager.Instance.PlayShoot();
         GameObject bullet = pooler.SpawnFromPools("Bullet", firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);

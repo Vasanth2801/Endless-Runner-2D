@@ -1,9 +1,7 @@
 using UnityEngine;
 
-public class ObstacleSpawner : MonoBehaviour
+public class CoinSpawner : MonoBehaviour
 {
-    [Header("Spawn Settings")]
-    [SerializeField] private GameObject prefab;
     [SerializeField] private float minX;
     [SerializeField] private float maxX;
     [SerializeField] private float minY;
@@ -22,15 +20,15 @@ public class ObstacleSpawner : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer <= 0f)
         {
-            SpawnObstacle();
+            SpawnCoin();
             timer = spawnInterval;
         }
     }
 
-    void SpawnObstacle()
+    void SpawnCoin()
     {
         float RandomX = Random.Range(minX, maxX);
         float RandomY = Random.Range(minY, maxY);
-        pooler.SpawnFromPools("Obstacle",transform.position + new Vector3(RandomX,RandomY,0), Quaternion.identity);
+        pooler.SpawnFromPools("Coin", transform.position + new Vector3(RandomX, RandomY, 0), Quaternion.identity);
     }
 }

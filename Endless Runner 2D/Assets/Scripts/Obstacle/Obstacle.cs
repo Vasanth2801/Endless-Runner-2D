@@ -4,7 +4,11 @@ public class Obstacle : MonoBehaviour
 {
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Time.timeScale = 0f;
-        Debug.Log("Game Over!");
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            Time.timeScale = 0f;
+            Debug.Log("Game Over!");
+        }
+        gameObject.SetActive(false);
     }
 }

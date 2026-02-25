@@ -979,7 +979,7 @@ Transform:
   m_GameObject: {fileID: 1690723621}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 15.52, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -997,6 +997,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdaaf3f111b3d4e44b93ec945be30e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleSpawner
+  prefab: {fileID: 885359337346021811, guid: aa18af9f464795b41ac74262c0909e04, type: 3}
+  minX: 3
+  maxX: 3.5
+  minY: -3.4
+  maxY: 3.4
+  spawnInterval: 0.95
 --- !u!1 &1910074046
 GameObject:
   m_ObjectHideFlags: 0

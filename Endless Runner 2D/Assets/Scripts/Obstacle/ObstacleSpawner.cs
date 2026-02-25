@@ -30,8 +30,7 @@ public class ObstacleSpawner : MonoBehaviour
     {
         float RandomX = Random.Range(minX, maxX);
         float RandomY = Random.Range(minY, maxY);
-        Vector2 spawnPosition = new Vector2(RandomX, RandomY);
 
-        Instanitate(prefab, spawnPosition, Quaternion.identity);
+        Instantiate(prefab, transform.position + new Vector3(RandomX,RandomY,0), Quaternion.identity);
     }
 }
